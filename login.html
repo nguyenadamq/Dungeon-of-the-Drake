@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <script src="intro.js"></script>
+        <link rel="stylesheet" href="login.css">
+    </head>
+    <body>
+        <div class="background">
+            <div class="animation"></div>
+            <div class="animation"></div>
+        </div>
+        <div class="body">
+            <div class="outliner">
+                <form autocomplete="off">
+                    <h1 class="register" onclick="toHome()">Register</h1>
+                    <p class="userinfolabel">Username</p>
+                    <input type="text" class="registerinfo" id="username" placeholder="Enter Username">
+                    <p class="userinfolabel">Password</p>
+                    <input type="text" class="registerinfo" id="password" placeholder="Enter Password" onfocus="passFormatIn()" onfocusout="passFormatOut()">
+                    <div id="password-format" class="password-format"><p id="steps">Password length: >= 8 characters</p></div>
+                    <p class="rpassword" id="rpassword">Password length: </p>
+                    <p class="rpassindicator" id="rpassindicator">Password</p>
+                </form>
+                    <button type="submit" id="submitr" onclick="register()">Register</button>
+                    <p id="usertaken"></p>
+            </div>
+            <div class="outlinel">
+                <form autocomplete="off">
+                    <h1 class="login">Login</h1>
+                    <p class="userinfolabel">Username</p>
+                    <input type="text" class="logininfo" id="usernamel" placeholder="Enter Username">
+                    <p class="userinfolabel">Password</p>
+                    <input type="text" class="logininfo" id="passwordl" placeholder="Enter Password">
+                </form>
+                    <button type="submit" id="submitl" onclick ="login()">Login</button>
+                    <p id="login-error-msg">Invalid login. Please try again!</div>
+            </div>
+        </div>
+            
+    </body>
+</html>

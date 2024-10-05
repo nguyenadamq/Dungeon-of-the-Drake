@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <script src="intro.js">
+            window.onload = function() {
+                let userArray = JSON.parse(localStorage.getItem("usersSave"));
+                
+                if (userArray) {
+                    // The userArray exists, proceed with your logic
+                    console.log("Loaded userArray:", userArray);
+                    
+                    // You can now work with userArray, like displaying user data, etc.
+                } else {
+                    // No userArray found, handle the case (e.g., redirect to login page)
+                    console.log("No user data found, redirecting to login.");
+                    window.location.replace("login.html");
+                }
+            }
+        </script>
+        <link rel="stylesheet" href="character.css">
+    </head>
+    <body>
+        <div id="background" class = "background">
+            <div class="animation"></div>
+            <div class="animation"></div>
+        </div>
+        <div class="body">
+            <div class="title-container">
+                <h1 class="title">Choose your character!</h1>
+            </div>
+            <h1 onclick="toLogin()">Back to Login</h1>
+        </div>
+    </body>
+</html>
